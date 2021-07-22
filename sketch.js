@@ -1,6 +1,6 @@
 var dog, sadDog,happyDog;
 var foodS, foodStock,foodObj,addFood,milkBottle2,milkBottle1,milkBottle;
-var database,readGamestate,gameState;
+var database,readGamestate,gameState,reset;
 var fedTime,FeedTime,feed,lastFed;
 var currentTime;
 var bedroom, garden, washroom,livingroom;
@@ -40,6 +40,10 @@ foodStock.set(20);
   addFood.position(850,95);
   addFood.mousePressed(addFoods);
 
+	reset= createButton("Reset");
+	reset.position(600,90);
+	reset.mousePressed(reset);
+	
   feed=createButton("Feed The Dog");
   feed.position(700,95);
   feed.mousePressed(feedDog);
@@ -132,6 +136,9 @@ function addFoods(){
   database.ref('/').update({
     Food: foodS
   })
+}
+function reset(){
+
 }
 function update(state){
   database.ref('/').update({
