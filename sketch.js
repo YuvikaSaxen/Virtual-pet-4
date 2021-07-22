@@ -22,7 +22,7 @@ function setup() {
   foodStock= database.ref('Food');
   foodStock.on("value",readStock);
 foodStock.set(20);
-}
+
   dog= createSprite(800,200,150,150);
   dog.addImage(sadDog);
   dog.scale=0.15;
