@@ -12,7 +12,7 @@ function preload()
   garden= loadImage("virtual pet images/Garden.png");
   washroom= loadImage("virtual pet images/Wash Room.png");
   livingroom= loadImage("virtual pet images/Living Room.png");
-	milkBottle= loadImage("milk.png");
+	milkBottle= loadImage("Milk.png");
 }
 
 function setup() {
