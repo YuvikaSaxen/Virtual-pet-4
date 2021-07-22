@@ -1,5 +1,5 @@
 var dog, sadDog,happyDog;
-var foodS, foodStock,foodObj,addFood,milkBottle2;
+var foodS, foodStock,foodObj,addFood,milkBottle2,milkBottle1,milkBottle;
 var database,readGamestate,gameState;
 var fedTime,FeedTime,feed,lastFed;
 var currentTime;
@@ -12,17 +12,26 @@ function preload()
   garden= loadImage("virtual pet images/Garden.png");
   washroom= loadImage("virtual pet images/Wash Room.png");
   livingroom= loadImage("virtual pet images/Living Room.png");
+	milkBottle= loadImage("milk.png");
 }
 
 function setup() {
   database= firebase.database();
-	createCanvas(500, 500);
+	createCanvas(1000, 800);
   
   foodObj= new Food();
   foodStock= database.ref('Food');
   foodStock.on("value",readStock);
 foodStock.set(20);
 
+ milkBottle2= createSprite(800,200,150,150);
+  milkBottle2.addImage(milkBottle);
+  milkBottle2.scale=0.15;
+	
+	milkBottle1= createSprite(800,200,150,150);
+  milkBottle1.addImage(milkBottle);
+  milkBottle1.scale=0.15;
+	
   dog= createSprite(800,200,150,150);
   dog.addImage(sadDog);
   dog.scale=0.15;
