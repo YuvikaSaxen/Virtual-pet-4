@@ -1,7 +1,7 @@
 var dog, sadDog,happyDog;
 var foodS, foodStock,foodObj,addFood,milkBottle2,milkBottle1,milkBottle;
 var database,readGamestate,gameState;
-var fedTime,FeedTime,feed,lastFed;
+var fedTime,feed,lastFed;
 var currentTime;
 var bedroom, garden, washroom,livingroom;
 function preload()
@@ -30,7 +30,7 @@ foodStock.set(20);
 	
 	milkBottle1= createSprite(800,200,150,150);
   milkBottle1.addImage(milkBottle);
-  milkBottle1.scale=0.025;
+  milkBottle1.scale=0.15;
 	
   dog= createSprite(800,200,150,150);
   dog.addImage(sadDog);
