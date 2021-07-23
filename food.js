@@ -4,7 +4,7 @@ constructor(){
 display(){
    var button= createButton("Feed The Dog");
    button.position(400,125);
-   if(button.mousePressed(Function(){
+   if(button.mousePressed(function(){
    foodS=foodS-1;
    gameState=1;
    database.ref('/').update({'gameState':gameState})
