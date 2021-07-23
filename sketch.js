@@ -1,6 +1,6 @@
 var dog, sadDog,happyDog;
 var foodS, foodStock,foodObj,addFood,milkBottle2,milkBottle1,milkBottle;
-var database,readGamestate,gameState,reset;
+var database,readGamestate,gameState;
 var fedTime,FeedTime,feed,lastFed;
 var currentTime;
 var bedroom, garden, washroom,livingroom;
@@ -30,28 +30,11 @@ foodStock.set(20);
 	
 	milkBottle1= createSprite(800,200,150,150);
   milkBottle1.addImage(milkBottle);
-  milkBottle1.scale=0.15;
+  milkBottle1.scale=0.025;
 	
   dog= createSprite(800,200,150,150);
   dog.addImage(sadDog);
   dog.scale=0.15;
-
-  addFood=createButton("Add Food");
-  addFood.position(850,95);
-  addFood.mousePressed(addFoods);
-
-	reset= createButton("Reset");
-	reset.position(600,90);
-	reset.mousePressed(reset);
-	
-  feed=createButton("Feed The Dog");
-  feed.position(700,95);
-  feed.mousePressed(feedDog);
-
-  readGamestate= database.ref('gameState');
-  readGamestate.on("value",function(data){
-    gameState=data.val();
-});
   }
 function draw() {  
   background("yellow");
@@ -108,6 +91,7 @@ function draw() {
     if(gameState===6){
       dog.addImage(garden);
       dog.scale=1;
+      dog.y= 175;
       milkBottle2.visible=false;
     }
     var Play= createButton("Lets Play!");
@@ -125,26 +109,15 @@ function draw() {
   gameStateRef.on('value',function(data){
     gameState = data.val();
   });
-textSize(25);
 drawSprites();
+textSize(25);
+	fill("black");
+  text("Milk Bottles Remaining  "+foodS,170,440);
+
   }
   function readStock(data){
     foodS=data.val();
   }
-function addFoods(){
-  foodS++;
-  database.ref('/').update({
-    Food: foodS
-  })
-}
-function reset(){
-
-}
-function update(state){
-  database.ref('/').update({
-    gameState:state
-  });
-}
 function writeStock(x){
 database.ref('/').update({
   food:x
