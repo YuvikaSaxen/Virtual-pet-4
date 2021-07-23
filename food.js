@@ -8,7 +8,7 @@ display(){
    foodS=foodS-1;
    gameState=1;
    database.ref('/').update({'gameState':gameState})
-      }));
+      }))
    var addFood= createButton("Add Food");
 addFood.position(500,125);
 if(addFood.mousePressed(function(){
