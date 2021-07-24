@@ -24,7 +24,7 @@ function setup() {
   foodStock.on("value",readStock);
 foodStock.set(20);
 
- milkBottle2= createSprite(600,250,150,150);
+ milkBottle2= createSprite(640,250,150,150);
   milkBottle2.addImage(milkBottle);
   milkBottle2.scale=0.15;
 	
