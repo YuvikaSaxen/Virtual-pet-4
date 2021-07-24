@@ -72,7 +72,7 @@ function draw() {
     }));
     if(gameState===3){
       dog.addImage(washroom);
-      dog.scale=1;
+      dog.scale=5;
       milkBottle2.visible=false;
 	     milkBottle1.visible=true;
     }
