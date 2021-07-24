@@ -17,7 +17,7 @@ function preload()
 
 function setup() {
   database= firebase.database();
-	createCanvas(500, 500);
+	createCanvas(1000, 800);
   
   foodObj= new Food();
   foodStock= database.ref('Food');
