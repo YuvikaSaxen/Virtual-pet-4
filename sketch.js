@@ -24,7 +24,7 @@ function setup() {
   foodStock.on("value",readStock);
 foodStock.set(20);
 
- milkBottle2= createSprite(90,3000,150,150);
+ milkBottle2= createSprite(90,300,150,150);
   milkBottle2.addImage(milkBottle);
   milkBottle2.scale=0.15;
 	
@@ -121,7 +121,7 @@ function draw() {
 drawSprites();
 textSize(15);
 	fill("black");
-  text("Milk Bottles Remaining  "+foodS,170,440);
+  text("Milk Bottles Remaining : "+foodS,120,440);
 
   }
   function readStock(data){
