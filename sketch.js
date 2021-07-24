@@ -84,7 +84,7 @@ function draw() {
     }));
     if(gameState===4){
       dog.addImage(bedroom);
-      dog.scale=1;
+      dog.scale=1.5;
       milkBottle2.visible=false;
         milkBottle1.visible=true;
     }
