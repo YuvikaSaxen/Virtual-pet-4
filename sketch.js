@@ -24,7 +24,7 @@ function setup() {
   foodStock.on("value",readStock);
 foodStock.set(20);
 
- milkBottle2= createSprite(600,250,150,150);
+ milkBottle2= createSprite(100,400,150,150);
   milkBottle2.addImage(milkBottle);
   milkBottle2.scale=0.15;
 	
@@ -68,7 +68,7 @@ function draw() {
     }));
     if(gameState===3){
       dog.addImage(washroom);
-      dog.scale=7;
+      dog.scale=1;
       milkBottle2.visible=false;
     }
     var Sleep= createButton("I am very Sleepy!");
@@ -79,7 +79,7 @@ function draw() {
     }));
     if(gameState===4){
       dog.addImage(bedroom);
-      dog.scale=7;
+      dog.scale=1;
       milkBottle2.visible=false;
     }
     var PlayInGarden= createButton("Lets Play in garden!");
@@ -90,7 +90,7 @@ function draw() {
     }));
     if(gameState===6){
       dog.addImage(garden);
-      dog.scale=7;
+      dog.scale=1;
       dog.y= 175;
       milkBottle2.visible=false;
     }
@@ -102,7 +102,7 @@ function draw() {
     }));
     if(gameState===5){
       dog.addImage(livingroom);
-      dog.scale=7;
+      dog.scale=1;
       milkBottle2.visible=false;
     }
 	var gameStateRef=database.ref('gameState');
