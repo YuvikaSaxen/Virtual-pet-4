@@ -73,6 +73,7 @@ function draw() {
     if(gameState===3){
       dog.addImage(washroom);
       dog.scale=2.5;
+	    dog.x=300
       milkBottle2.visible=false;
 	     milkBottle1.visible=true;
     }
