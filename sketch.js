@@ -28,7 +28,7 @@ foodStock.set(20);
   milkBottle2.addImage(milkBottle);
   milkBottle2.scale=0.15;
 	
-	milkBottle1= createSprite(140,420,150,150);
+	milkBottle1= createSprite(100,420,150,150);
   milkBottle1.addImage(milkBottle);
   milkBottle1.scale=0.15;
 	
