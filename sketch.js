@@ -24,15 +24,15 @@ function setup() {
   foodStock.on("value",readStock);
 foodStock.set(20);
 
- milkBottle2= createSprite(640,250,150,150);
+ milkBottle2= createSprite(90,3000,150,150);
   milkBottle2.addImage(milkBottle);
   milkBottle2.scale=0.15;
 	
 	milkBottle1= createSprite(100,420,150,150);
   milkBottle1.addImage(milkBottle);
-  milkBottle1.scale=0.15;
+  milkBottle1.scale=0.10;
 	
-  dog= createSprite(800,200,150,150);
+  dog= createSprite(100,300,150,150);
   dog.addImage(sadDog);
   dog.scale=0.15;
   }
@@ -119,7 +119,7 @@ function draw() {
     gameState = data.val();
   });
 drawSprites();
-textSize(25);
+textSize(15);
 	fill("black");
   text("Milk Bottles Remaining  "+foodS,170,440);
 
