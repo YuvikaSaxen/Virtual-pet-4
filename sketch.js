@@ -45,9 +45,11 @@ function draw() {
   if(foodS==0){
     dog.addImage(happyDog);
     milkBottle2.visible=false;
+	  milkBottle1.visible= true;
   }else{
     dog.addImage(sadDog);
     milkBottle2.visible= true;
+	  milkBottle1.visible= true;
   }
     if(gameState===1){
       dog.addImage(happyDog);
